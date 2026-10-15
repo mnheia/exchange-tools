@@ -32,6 +32,18 @@ PowerShell scripts for on-premises Microsoft Exchange administration, reporting 
 .\maintenance\Remove-OldExchangeDiagnosticLogs.ps1 -Path 'C:\Program Files\Microsoft\Exchange Server\V15\Logging' -Days 30
 ```
 
+
+## Exchange health
+
+- `monitoring/Get-ExchangeHealth.ps1` — Exchange health monitors, transport queues, mailbox database state, and available disk space.
+
+```powershell
+.\monitoring\Get-ExchangeHealth.ps1
+.\monitoring\Get-ExchangeHealth.ps1 -Servers EX01 -QueueWarning 100 -DiskWarningPercent 15
+```
+
+Run from Exchange Management Shell. These checks are read-only; the disk check requires remote CIM access.
+
 ## Bugs
 
 Please report issues at https://github.com/mnheia/exchange-tools/issues
