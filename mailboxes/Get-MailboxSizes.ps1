@@ -1,4 +1,14 @@
-# Calculate mailbox sizes and total size (GiB).
+<#
+.SYNOPSIS
+    Calculate mailbox sizes and total size (GiB).
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param([string]$CsvPath)
 $report = foreach ($mailbox in (Get-Mailbox -ResultSize Unlimited)) {
     try {

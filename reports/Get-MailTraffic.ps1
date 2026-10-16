@@ -1,4 +1,14 @@
-# Count Exchange SEND tracking events and recipients by sender.
+<#
+.SYNOPSIS
+    Count Exchange SEND tracking events and recipients by sender.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param(
     [ValidateSet('Today','Yesterday','PreviousMonth')][string]$Period = 'Today',
     [string[]]$Domains = @(),
