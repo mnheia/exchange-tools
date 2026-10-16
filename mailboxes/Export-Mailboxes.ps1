@@ -1,4 +1,14 @@
-# Queue Exchange on-premises mailbox exports to a PST share.
+<#
+.SYNOPSIS
+    Queue Exchange on-premises mailbox exports to a PST share.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)][string]$ExportPath,
