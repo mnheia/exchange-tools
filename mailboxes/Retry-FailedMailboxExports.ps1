@@ -1,4 +1,14 @@
-# Requeue failed export requests after examining their failure reason.
+<#
+.SYNOPSIS
+    Requeue failed export requests after examining their failure reason.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param(
     [Parameter(Mandatory)][string]$ExportPath,
     [string[]]$Identity,
