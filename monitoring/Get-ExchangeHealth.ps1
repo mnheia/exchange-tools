@@ -1,4 +1,14 @@
-# Read-only Exchange Server health summary. Run in Exchange Management Shell.
+<#
+.SYNOPSIS
+    Read-only Exchange Server health summary. Run in Exchange Management Shell.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param(
     [string[]]$Servers = @(),
     [int]$QueueWarning = 100,
