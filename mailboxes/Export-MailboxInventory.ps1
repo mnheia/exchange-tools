@@ -1,4 +1,14 @@
-# Export an Exchange mailbox inventory, optionally including AD and mailbox logon metadata.
+<#
+.SYNOPSIS
+    Export an Exchange mailbox inventory, optionally including AD and mailbox logon metadata.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param(
     [Parameter(Mandatory)][string]$CsvPath,
     [switch]$IncludeLogons
