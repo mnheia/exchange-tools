@@ -1,4 +1,14 @@
-# Review Windows Security logon events (4624) from non-private IPv4 addresses.
+<#
+.SYNOPSIS
+    Review Windows Security logon events (4624) from non-private IPv4 addresses.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param([int]$HoursBack = 1, [string]$CsvPath)
 $events = Get-WinEvent -FilterHashtable @{
     LogName='Security'; ID=4624; StartTime=(Get-Date).AddHours(-$HoursBack)
