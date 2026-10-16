@@ -1,4 +1,14 @@
-# Export GUID-to-user mappings for migration and administration.
+<#
+.SYNOPSIS
+    Export GUID-to-user mappings for migration and administration.
+
+.NOTES
+    Author: mnheia
+    Copyright: (c) 2026 mnheia
+    Repository: https://github.com/mnheia/exchange-tools
+    License: GPL-3.0 (see LICENSE)
+#>
+
 param([string]$OutputDirectory = '.')
 New-Item -Path $OutputDirectory -ItemType Directory -Force | Out-Null
 $users = Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox |
